@@ -1,0 +1,9 @@
+*.exe
+*.o
+*.pdf
+*.png
+*.jpg
+*.bmp
+threads
+omp
+/.vscode/
