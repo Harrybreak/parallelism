@@ -1,7 +1,7 @@
 .PHONY:clean
 
-CFLAGS=-fopenmp
-OFLAGS=-lpthread -lgomp -fopenmp
+CFLAGS=-fopenmp -fexceptions
+OFLAGS=-lpthread -lgomp -fopenmp -fexceptions -O2
 
 omp: omp.cpp
 	g++ -o $@.o $(CFLAGS) -c $^
@@ -9,6 +9,11 @@ omp: omp.cpp
 	./$@
 
 threads: threads.cpp
+	g++ -o $@.o $(CFLAGS) -c $^
+	g++ -o $@ $@.o $(OFLAGS)
+	./$@
+
+winapi: winapi.cpp
 	g++ -o $@.o $(CFLAGS) -c $^
 	g++ -o $@ $@.o $(OFLAGS)
 	./$@

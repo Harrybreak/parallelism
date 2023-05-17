@@ -2,8 +2,8 @@
 #include <vector>
 #include <chrono>
 #include <omp.h>
-#define T   25
-#define N   250
+#define T   50
+#define N   1000000
 #define NPM 1000000.0
 using namespace std;
 void f()
