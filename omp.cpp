@@ -18,7 +18,7 @@ void f(size_t x)
 }
 int main()
 {
-    size_t n[3] = {100000, 1000000, 10000000};
+    size_t n[4] = {10000, 100000, 1000000, 10000000};
     size_t t[4] = {12, 24, 48, 96};
     for (const size_t N : n) {
     for (const size_t T : t) {
