@@ -33,12 +33,9 @@ int main()
     #pragma omp parallel num_threads(T)
     #pragma omp parallel
     {
-        #pragma omp task
         f(N);
-        #pragma omp taskwait
-        #pragma omp task
+        #pragma omp barrier
         f(N);
-        #pragma omp taskwait
     }
 
     chrono::duration<clock_t, nano> stop = 
